@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" 
+layout:decorator="layout">
+<head>
+<meta charset="utf-8" />
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}" />
+</head>
+<body>
+
+
+<div class="container" layout:fragment="content" >
+<h3>Confirmation</h3>
+
+	<div class="form-group">
+		<label>ID</label>
+		<label th:text="${produit.id}"/>
+		
+	</div>
+	
+	<div class="form-group">
+		<label>DESIGNATION</label>
+		<label th:text="${produit.designation}"/>
+		
+	</div>
+	
+	<div class="form-group">
+		<label>PRIX</label>
+		<label th:text="${produit.prix}"/>
+		
+	</div>
+	
+	<div class="form-group">
+		<label>QUANTITE</label>
+		<label th:text="${produit.qte}"/>
+		
+	</div>
+	
+
+</div>
+</body>
+</html>

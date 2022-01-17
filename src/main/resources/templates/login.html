@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.org"
+>
+<head>
+<meta charset="utf-8" />
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}" />
+</head>
+<body>
+
+<div class="container">
+<div class="row">
+<div class="col-md-6 offset-md-3">
+
+<h3>Authentification</h3>
+	
+	<form class="row g-3" th:action="@{/login}" method="post">
+	<span class="text-danger" th:if="${param.error}">Incorrect Username or Password</span>
+	<span class="text-success" th:if="${param.logout}">You have been loggedout</span>
+	
+  <div class="col-md-12">
+    <label for="inputEmail4" class="form-label">Login</label>
+    <input type="text" name="username" class="form-control" id="inputEmail4">
+  </div>
+  
+    <div class="col-md-12">
+    <label for="inputEmail4" class="form-label">Password</label>
+    <input type="password" name="password" class="form-control" id="inputEmail4">
+  </div>
+
+  <div class="col-12">
+    <button type="submit"  class="btn btn-primary mt-3">Login</button>
+  </div>
+</form>
+</div>
+</div>
+</div>
+</body>
+</html>
